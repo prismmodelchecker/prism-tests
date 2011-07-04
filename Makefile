@@ -19,11 +19,11 @@ prism_logs: $(LOG_FILES)
 	NO_PROPS_EXIST=1 ; for PROP in $<*.props ; do test -e $$PROP ; NO_PROPS_EXIST=$$? ; break ; done ; \
 	if [ $$NO_PROPS_EXIST -eq 0 ] ; then \
 	  for PROP in $<*.props; do \
-	  if [ -e $$PROP.args ]; then \
-	    PROP_ARGS=`cat $$PROP.args`; \
-	  fi ; \
-	  echo "$(PRISM_EXEC) -test $$MODEL_ARGS $< $$PROP $$PROP_ARGS >> $@"; \
-	  $(PRISM_EXEC) -test $$MODEL_ARGS $< $$PROP $$PROP_ARGS >> $@ 2>&1 || (cat $@ && exit 1); \
+	    if [ -e $$PROP.args ]; then \
+	      PROP_ARGS=`cat $$PROP.args`; \
+	    fi ; \
+	    echo "$(PRISM_EXEC) -test $$MODEL_ARGS $< $$PROP $$PROP_ARGS >> $@"; \
+	    $(PRISM_EXEC) -test $$MODEL_ARGS $< $$PROP $$PROP_ARGS >> $@ 2>&1 || cat $@ && exit 1; \
 	  done; \
 	else \
 	  echo "$(PRISM_EXEC) -test $$MODEL_ARGS $< > $@"; \
