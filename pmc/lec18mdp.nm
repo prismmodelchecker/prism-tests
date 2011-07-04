@@ -1,0 +1,34 @@
+// Simple MDP from Lec 18 of Probabilistic Model Checking
+
+mdp
+
+module M
+
+// note: restricted to part of mdp
+s:[0..8] init 1;
+
+[] s=0 -> 1:(s'=2);
+[] s=0 -> 0.6:(s'=0) + 0.3:(s'=1) + 0.1:(s'=2);
+[] s=1 -> 0.3:(s'=3) + 0.7:(s'=4);
+[] s=3 -> 1:(s'=4);
+[] s=4 -> 1:(s'=1);
+[] s=4 -> 1:(s'=3);
+[] s=4 -> 1:(s'=6);
+[] s=6 -> 1:(s'=6);
+[] s=2 -> 1:(s'=5);
+[] s=5 -> 0.9:(s'=7) + 0.1:(s'=8);
+[] s=7 -> 1:(s'=5);
+[] s=8 -> 1:(s'=5);
+
+endmodule
+
+verify
+	// RESULT: true (should be satisfied by {0,1})
+	filter(forall, P<0.8 [ (G !(s=3)) & (G F (s=6)) ], s=0|s=1);
+	// RESULT: true (should be satisfied by {0,1})
+	filter(count, P<0.8 [ (G !(s=3)) & (G F (s=6)) ]) = 2;
+	// RESULT: true (should be satisfied by {3})
+	filter(forall, P>0 [ (G !(s=3)) & (G F (s=6)) ], s=6);
+	// RESULT: true (should be satisfied by {3})
+	filter(count, P>0 [ (G !(s=3)) & (G F (s=6)) ]) = 1;
+endverify
