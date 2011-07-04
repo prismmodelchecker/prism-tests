@@ -27,7 +27,7 @@ prism_logs: $(LOG_FILES)
 	  done; \
 	else \
 	  echo "$(PRISM_EXEC) -test $$MODEL_ARGS $< > $@"; \
-	  $(PRISM_EXEC) -test $$MODEL_ARGS $< > $@ 2>&1 || (cat $@ && exit 1); \
+	  $(PRISM_EXEC) -test $$MODEL_ARGS $< > $@ 2>&1 || cat $@ && exit 1; \
 	fi \
 
 clean:
