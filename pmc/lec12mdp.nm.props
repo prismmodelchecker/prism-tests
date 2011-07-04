@@ -1,0 +1,4 @@
+	// RESULT: 0
+	Pmin=? [ F "tails" ];
+	// RESULT: 0.5
+	Pmax=? [ F "tails" ];

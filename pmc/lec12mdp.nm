@@ -19,10 +19,3 @@ endmodule
 
 label "heads" = s=2;
 label "tails" = s=3;
-
-verify
-	// RESULT: 0
-	Pmin=? [ F "tails" ];
-	// RESULT: 0.5
-	Pmax=? [ F "tails" ];
-endverify
