@@ -23,11 +23,11 @@ prism_logs: $(LOG_FILES)
 	    PROP_ARGS=`cat $$PROP.args`; \
 	  fi ; \
 	  echo "$(PRISM_EXEC) -test $$MODEL_ARGS $< $$PROP $$PROP_ARGS >> $@"; \
-	  $(PRISM_EXEC) -test $$MODEL_ARGS $< $$PROP $$PROP_ARGS >> $@ || (cat $@ && exit 1); \
+	  $(PRISM_EXEC) -test $$MODEL_ARGS $< $$PROP $$PROP_ARGS >> $@ 2>&1 || (cat $@ && exit 1); \
 	  done; \
 	else \
 	  echo "$(PRISM_EXEC) -test $$MODEL_ARGS $< > $@"; \
-	  $(PRISM_EXEC) -test $$MODEL_ARGS $< > $@ || (cat $@ && exit 1); \
+	  $(PRISM_EXEC) -test $$MODEL_ARGS $< > $@ 2>&1 || (cat $@ && exit 1); \
 	fi \
 
 clean:
