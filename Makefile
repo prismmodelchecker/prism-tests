@@ -16,8 +16,8 @@ prism_logs: $(LOG_FILES)
 	@if [ -e $<.args ]; then \
 	  MODEL_ARGS=`cat $<.args`; \
 	fi ; \
-	PROPS=`ls -1 $<*.props`; \
-	if [ "$PROPS" != "" ]; then \
+	NO_PROPS_EXIST=1 ; for PROP in $<*.props ; do test -e $$PROP ; NO_PROPS_EXIST=$$? ; break ; done ; \
+	if [ $$NO_PROPS_EXIST -eq 0 ] ; then \
 	  for PROP in $<*.props; do \
 	  if [ -e $$PROP.args ]; then \
 	    PROP_ARGS=`cat $$PROP.args`; \
