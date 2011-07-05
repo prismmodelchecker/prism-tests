@@ -32,24 +32,24 @@ prism_logs: $(LOG_FILES)
 	      PROP_ARGS=`cat $$PROP.args`; \
 	    fi; \
 	    echo "$(PRISM_EXEC) $$TEST_ARG $$MODEL_ARGS $< $$PROP $$PROP_ARGS >> $@"; \
-	    $(PRISM_EXEC) $$TEST_ARG $$MODEL_ARGS $< $$PROP $$PROP_ARGS >> $@ 2>&1 || (cat $@ && exit 1); \
+	    $(PRISM_EXEC) $$TEST_ARG $$MODEL_ARGS $< $$PROP $$PROP_ARGS >> $@ 2>&1; \
 	    if [ $$? -ne 0 -a "$(TESTALL)" = "" ]; then \
+	      cat $@; \
 	      exit 1; \
 	    fi; \
 	    if [ "$(TESTALL)" != "" ]; then \
-	     grep -i "error" $@; \
-	     grep -i "fail" $@; \
+	     grep -E -i "error|fail" $@ || exit 0; \
 	    fi; \
 	  done; \
 	else \
 	  echo "$(PRISM_EXEC) $$TEST_ARG $$MODEL_ARGS $< > $@"; \
-	  $(PRISM_EXEC) $$TEST_ARG $$MODEL_ARGS $< > $@ 2>&1 || (cat $@ && exit 1); \
+	  $(PRISM_EXEC) $$TEST_ARG $$MODEL_ARGS $< > $@ 2>&1; \
 	  if [ $$? -ne 0 -a "$(TESTALL)" = "" ]; then \
+	    cat $@; \
 	    exit 1; \
 	  fi; \
 	  if [ "$(TESTALL)" != "" ]; then \
-	    grep -i "error" $@; \
-	    grep -i "fail" $@; \
+	     grep -E -i "error|fail" $@ || exit 0; \
 	  fi; \
 	fi \
 
