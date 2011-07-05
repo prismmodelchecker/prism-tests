@@ -1,0 +1,29 @@
+	// ex 4
+	// RESULT: 0.5
+	Pmin=? [ F s=2 ]
+	
+	// ex 5
+	// RESULT: 0.5
+	Pmax=? [ F s=3 ]
+	
+	// ex 8
+	// RESULT: 2
+	Rmax=? [ I=1 ]
+	// RESULT: 0.7
+	Rmax=? [ I=2 ]
+	// RESULT: 1.4
+	Rmax=? [ I=3 ]
+	// RESULT: 1
+	Rmax=? [ I=4 ]
+	
+	// ex 9
+	// NOT IMPLEMENTED YET
+	// RESULT: ?
+	//Rmax=? [ C<=4 ]
+
+	// ex 11
+	// RESULT: true
+	"ex11": P<1 [ X (P>=0.5 [ !"fail" U "initial" ]) ]
+	// RESULT: true
+	filter(forall, "ex11" <=> (s=0|s=1|s=2));
+
