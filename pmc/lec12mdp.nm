@@ -2,8 +2,9 @@
 
 mdp
 
-// version: 1 or 2; fix at 1 for now
-const int version = 1;
+// version: 1 or 2
+// TODO: enable both in .args file
+const int version;
 
 module M
 
