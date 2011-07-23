@@ -5,5 +5,5 @@ const int T;
 Pmax=? [ F<=T "done" ]
 
 // Maximum expected time to elect a leader
-// RESULT (T=1): 1379.5
+// RESULT: 1379.5
 R{"time"}min=? [ F "done" ]
