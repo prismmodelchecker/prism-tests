@@ -1,6 +1,8 @@
 // Test model that breaks following undefined-constant changes in rev 3319
 // Fixed in rev 4249.
 
+// Test disabled currently since it *should* throw an error
+
 dtmc
 
 const double some = pow(1);
