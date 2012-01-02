@@ -53,6 +53,10 @@ prism_logs: $(LOG_FILES)
 	  fi; \
 	fi \
 
+ignore:
+	svn propset svn:ignore '*.log' .
+	svn ci -m 'svn:ignore'
+
 clean:
 	find . -name '*.log' -exec rm {} \;
 
