@@ -1,0 +1,25 @@
+	// RESULT: 0.0
+	Rmax=? [ C<=0 ];
+	
+	// RESULT: 5.0
+	Rmax=? [ C<=1 ];
+	
+	// RESULT: 17.0
+	Rmax=? [ C<=2 ];
+	
+	// RESULT: 28.0
+	Rmax=? [ C<=3 ];
+	
+	
+	// RESULT: 2.0
+	Rmax=? [ I=0 ];
+	
+	// RESULT: 5.0
+	Rmax=? [ I=1 ];
+	
+	// RESULT: 11.0
+	Rmax=? [ I=2 ];
+	
+	// RESULT: 0.0
+	Rmax=? [ I=3 ];
+	
