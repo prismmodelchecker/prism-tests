@@ -15,6 +15,11 @@ Use the prism-test script (in etc/scripts/) to automate test execution.
 You can give prism-test either a specific property file (test.nm.props)
 or a model file (test.nm), which runs all tests for that model.
 Alternatively, pass prism-test a directory, which is searched recursively for tests.
+For example:
+
+ prism-test pmc/lec12mdp.nm.props
+ prism-test pmc/lec12mdp.nm
+ prism-test pmc
 
 Current test sets are:
 
