@@ -9,6 +9,7 @@ can be included in a separate .args file, again with matching name (e.g. test.nm
 The tests are executed by running PRISM in test mode 'prism -test'.
 This looks for a comment of the form '// RESULT: xxx' preceding each property
 and then checks agains the expected result (xxx) after model checking.
+See e.g. the files example.nm and example.nm.props in this directory.
 
 Use the prism-test script (in etc/scripts/) to automate test execution.
 (In fact, this works via the prism-auto script, also in etc/scripts.)
