@@ -1,18 +1,20 @@
 Regressions tests
 ----------------
 
-Each model file (*.?m) is a separate test (possibly comprising multiple parts).
-Optionally there can be properties file(s), named <model>*.props.
+Each test takes the form of a PRISM model file (e.g. test.nm),
+usually with an accompanying property file given a matching name (e.g. test.nm.props).
+Command-line switches that need to be passed to PRISM to run the test
+can be included in a separate .args file, again with matching name (e.g. test.nm.props.args).
 
-Tests should be run as "prism -test <model> <props>"
-(where the latter is omitted if absent)
+The tests are executed by running PRISM in test mode 'prism -test'.
+This looks for a comment of the form '// RESULT: xxx' preceding each property
+and then checks agains the expected result (xxx) after model checking.
 
-If there is a file <model>.args, this denotes required additional command-line arguments.
-Similarly, a file <props>.args can give further arguments for each property.
-
-Alternatively, run "make clean" and then "make" to automated testing of all files.
-If "prism" is not in your path, use "make PRISM_EXEC=/full/path/to/bin/prism".
-The Makefile is also symlinked to subdirectories for partial testing.
+Use the prism-test script (in etc/scripts/) to automate test execution.
+(In fact, this works via the prism-auto script, also in etc/scripts.)
+You can give prism-test either a specific property file (test.nm.props)
+or a model file (test.nm), which runs all tests for that model.
+Alternatively, pass prism-test a directory, which is searched recursively for tests.
 
 Current test sets are:
 
