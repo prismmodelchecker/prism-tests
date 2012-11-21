@@ -1,18 +1,18 @@
 
-// RESULT :
+// RESULT: 1/6
 P=? [ F s=7 ]
 
-// RESULT :
+// RESULT: 1/6
 P=? [ F s=8 ]
 
-// RESULT :
+// RESULT: 1/6
 P=? [ F s=9 ]
 
-// RESULT :
+// RESULT: 1/6
 P=? [ F s=10 ]
 
-// RESULT :
+// RESULT: 1/6
 P=? [ F s=11 ]
 
-// RESULT :
+// RESULT: 1/6
 P=? [ F s=12 ]
