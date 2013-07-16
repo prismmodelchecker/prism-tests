@@ -28,3 +28,4 @@ Current test sets are:
 * bugfixes/ : examples based on previously fixed bugs
 * papers/ : tutorial/toy examples from papers
 * pmc/ : examples from Probabilistic Model Checking lecture course
+* contrib/ : test contributed from others
