@@ -13,7 +13,7 @@ See e.g. the files example.nm and example.nm.props in this directory.
 
 See here for more details for PRISM's test mode:
 
-http://www.prismmodelchecker.org/wiki/Developers/RegressionTesting
+ http://www.prismmodelchecker.org/wiki/Developers/RegressionTesting
 
 Use the prism-test script (in etc/scripts/) to automate test execution.
 (In fact, this works via the prism-auto script, also in etc/scripts.)
