@@ -1,0 +1,8 @@
+// RESULT: 0.1
+Pmax=? [ F<=1 t=1 ]
+
+// RESULT: 0.2
+Pmax=? [ F<=2 t=1 ]
+
+// RESULT: 0.4
+Pmax=? [ F<=4 t=1 ]
