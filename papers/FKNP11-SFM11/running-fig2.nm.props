@@ -17,9 +17,14 @@
 	Rmax=? [ I=4 ]
 	
 	// ex 9
-	// NOT IMPLEMENTED YET
-	// RESULT: ?
-	//Rmax=? [ C<=4 ]
+	// RESULT: 2
+	Rmax=? [ C<=1 ]
+	// RESULT: 8
+	Rmax=? [ C<=2 ]
+	// RESULT: 10.5
+	Rmax=? [ C<=3 ]
+	// RESULT: 11.5
+	Rmax=? [ C<=4 ]
 
 	// ex 11
 	// RESULT: true

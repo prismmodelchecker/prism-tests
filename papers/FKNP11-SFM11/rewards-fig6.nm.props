@@ -3,6 +3,5 @@
 Rmax=? [ I=3 ]
 
 // sec 5.2
-// NOT IMPLEMENTED YET
-// RESULT: 
-//Rmin=? [ C<=3 ]
+// RESULT: 5
+Rmin=? [ C<=3 ]
