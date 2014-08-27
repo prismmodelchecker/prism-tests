@@ -1,0 +1,17 @@
+// RESULT: true
+filter(exists, E [ F s=7 & d=6 ], s>0)
+
+// RESULT: false
+E [ F s=7 & d=7 ]
+
+// RESULT: true
+E [ s<4 U d=1 ]
+
+// RESULT: false
+E [ s<4 U d=6 ]
+
+// RESULT: true
+A [ G s<=7 ]
+
+// RESULT: false
+A [ G s<=6 ]
