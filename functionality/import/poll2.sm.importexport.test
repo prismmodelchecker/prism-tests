@@ -1,0 +1,1 @@
+-ctmc -importmodel poll2.all -exportmodel poll2.sta,tra,lab
