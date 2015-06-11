@@ -1,1 +1,1 @@
--gaussseidel
+-gaussseidel -e 1e-7
