@@ -11,10 +11,20 @@ module M
 
 endmodule
 
-rewards
+rewards "a"
 	s=0: 2;
 	[] s=0: 3;
 	s=1: 5;
 	[] s=1: 7;
 	s=2: 11;
+endrewards
+
+rewards "b"
+	s=0: 2;
+	[] s=0: 3;
+	s=1: 5;
+	[] s=1: 7;
+	s=2: 11;
+	[] s=3: 13;
+	s=3: 17;
 endrewards
