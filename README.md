@@ -1,4 +1,4 @@
-# PRISM Regressions Tests
+# PRISM Regression Tests
 
 This is the PRISM Regression Test Suite, a collection of probabilistic model checking
 tasks that PRISM can perform, along with their expected result/output.
