@@ -15,3 +15,15 @@
 -exportmodel robot.prism.mrmc.lab:mrmc
 -exportmodel robot.prism.mrmc.sta:mrmc
 -exportmodel robot.prism.mrmc.trew:mrmc
+
+# Export model info separately (for a few formats) -explicit
+
+# -exportmodel robot.prism.tra -ex # order different
+-exportmodel robot.prism.sta -ex
+-exportmodel robot.prism.lab -ex
+#-exportmodel robot.prism.mrmc.tra:mrmc -ex
+#-exportmodel robot.prism.mrmc.sta:mrmc -ex
+-exportmodel robot.prism.mrmc.lab:mrmc -ex
+#-exportmodel robot.prism.matlab.tra:matlab -ex
+#-exportmodel robot.prism.matlab.sta:matlab -ex
+-exportmodel robot.prism.matlab.lab:matlab -ex

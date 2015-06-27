@@ -15,3 +15,15 @@
 -exportmodel dice.pm.mrmc.lab:mrmc
 -exportmodel dice.pm.mrmc.sta:mrmc
 -exportmodel dice.pm.mrmc.trew:mrmc
+
+# Export model info separately (for a few formats) - explicit
+
+-exportmodel dice.pm.tra -ex
+-exportmodel dice.pm.sta -ex
+-exportmodel dice.pm.lab -ex
+#-exportmodel dice.pm.mrmc.tra:mrmc -ex
+#-exportmodel dice.pm.mrmc.sta:mrmc -ex
+-exportmodel dice.pm.mrmc.lab:mrmc -ex
+#-exportmodel dice.pm.matlab.tra:matlab -ex
+#-exportmodel dice.pm.matlab.sta:matlab -ex
+-exportmodel dice.pm.matlab.lab:matlab -ex
