@@ -1,0 +1,2 @@
+dice_props.props -prop reach -exporttarget dice.pm.reach.lab
+dice_props.props -prop ltl -exporttarget dice.pm.ltl.lab
