@@ -1,8 +1,0 @@
-// RESULT: 0.5
-"reach": Pmax=? [ F "goal1" ]
-
-// RESULT: 0.5
-"ltl": Pmax=? [ G F "goal1" ]
-
-// RESULT: 0.1
-"ltl2": Pmax=? [ (G !"hazard")&(G F "goal1") ]

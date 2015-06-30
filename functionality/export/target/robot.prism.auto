@@ -1,3 +1,0 @@
-robot_props.props -prop reach -exporttarget robot.pm.reach.lab
-robot_props.props -prop ltl -exporttarget robot.pm.ltl.lab
-robot_props.props -prop ltl2 -exporttarget robot.pm.ltl2.lab
