@@ -1,3 +1,6 @@
+// Model (and properties) hacked a bit to things that can be
+// reliably tested on both symbolic/explicit engines
+
 dtmc
 
 module die
@@ -19,7 +22,7 @@ module die
 endmodule
 
 rewards "coin_flips"
-	[] s<7 : 1;
+	s=0 : 1;
 endrewards
 
 const AA;
