@@ -1,5 +1,5 @@
 "P>0.5 [ F s=7&d>x ]"
-"x:"
+"x"
 1, 2, 3
 true, true, false
 
@@ -7,6 +7,6 @@ true, true, false
 0.46875
 
 "R=? [ F ""done""&d>=x ]"
-"x:"
+"x"
 1, 2, 3
 1.0, Infinity, Infinity
