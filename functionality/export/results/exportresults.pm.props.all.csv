@@ -43,7 +43,7 @@ AA, BB, x, Result
 1, 2, 2, 0.625
 1, 2, 3, 0.46875
 
-"R=? [ F \"done\"&d>=x ]"
+"R=? [ F ""done""&d>=x ]"
 AA, BB, x, Result
 0, 1, 1, 1.0
 0, 1, 2, Infinity
