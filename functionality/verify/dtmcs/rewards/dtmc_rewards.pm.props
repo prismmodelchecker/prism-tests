@@ -1,0 +1,38 @@
+	// RESULT: 0.0
+	R=? [ C<=0 ];
+	
+	// RESULT: 5.0
+	R=? [ C<=1 ];
+	
+	// RESULT: 17.0
+	R=? [ C<=2 ];
+	
+	// RESULT: 28.0
+	R=? [ C<=3 ];
+	
+	
+	// RESULT: 28.0
+	R=? [ F s>2 ];
+	
+
+	// RESULT: 28.0
+	R=? [ C ];
+	
+
+	// RESULT: 0.0
+	R=? [ S ];
+
+	
+	// RESULT: 2.0
+	R=? [ I=0 ];
+	
+	// RESULT: 5.0
+	R=? [ I=1 ];
+	
+	// RESULT: 11.0
+	R=? [ I=2 ];
+	
+	// RESULT: 0.0
+	R=? [ I=3 ];
+
+
