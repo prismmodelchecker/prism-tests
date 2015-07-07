@@ -28,13 +28,13 @@
 	// RESULT: 0.0625
 	P=? [ G<=4 s<2 ];
 	
-	// RESULT: 0.5
+	// RESULT: 1/2
 	P=? [ s!=1 U s=3 ];
 	
-	// RESULT: 0.5
+	// RESULT: 1/2
 	P=? [ s!=1 U<=1 s=3 ];
 	
-	// RESULT: 0.5
+	// RESULT: 1/2
 	P=? [ s!=1 U<=8 s=3 ];
 	
 	// RESULT: 14.060546875
