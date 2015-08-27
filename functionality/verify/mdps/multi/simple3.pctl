@@ -1,4 +1,0 @@
-multi(P>=0.4 [ F s=1 & p=1 ], P>=0.6 [ F s=2 & p=2 ])
-
-Pmax=? [ F s=1 & p=1 ]
-Pmax=? [ F s=2 & p=2 ]
