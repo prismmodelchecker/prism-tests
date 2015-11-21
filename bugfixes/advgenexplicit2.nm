@@ -1,8 +1,6 @@
 // Bug fixed in trunk rev 3691
 // Explicit engine fails for adv gen on Pmin=? [ F s=3 ]
 
-// No way to test that the output is correct currently
-
 mdp
 
 module M1
