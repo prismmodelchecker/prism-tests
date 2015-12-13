@@ -18,5 +18,4 @@ label "hazard" = s=1;
 label "goal1" = s=5;
 label "goal2" = s=2|s=3;
 
-// Double the rewards to make it easier to distinguish between DTMC/CTMC
 rewards "time" true : 1; endrewards
