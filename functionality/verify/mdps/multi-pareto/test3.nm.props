@@ -1,0 +1,4 @@
+// RESULT: [(0.6,2)]
+multi(Rmax=? [C], Pmax=?[F x=3])
+
+
