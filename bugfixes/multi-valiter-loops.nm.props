@@ -1,1 +1,2 @@
+// RESULT: 0.0
 multi(R{"R1"}min=? [ C ])
