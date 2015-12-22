@@ -1,5 +1,6 @@
-// simple example test for cumulative reward
-//the model is in fact a MC
+// Simple example test for step-bounded cumulative reward
+// The model is in fact a MC
+// We also check -lp although it does not support the feature, but the testing ensures that an exception (and not a wrong result) is given.
 
 module M
 
