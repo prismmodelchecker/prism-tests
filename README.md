@@ -20,9 +20,9 @@ or a model file (test.nm), which runs all tests for that model.
 Alternatively, pass prism-test a directory, which is searched recursively for tests.
 For example:
 
- prism-test pmc/lec12mdp.nm.props
- prism-test pmc/lec12mdp.nm
- prism-test pmc
+* prism-test pmc/lec12mdp.nm.props
+* prism-test pmc/lec12mdp.nm
+* prism-test pmc
 
 Current test sets are:
 
@@ -30,8 +30,8 @@ Current test sets are:
 * bugfixes/ : examples based on previously fixed bugs
 * papers/ : tutorial/toy examples from papers
 * pmc/ : examples from Probabilistic Model Checking lecture course
-* contrib/ : test contributed from others
+* contrib/ : test contributed by others
 
 See here for more details:
 
- http://www.prismmodelchecker.org/wiki/Developers/RegressionTesting
+* http://www.prismmodelchecker.org/wiki/Developers/RegressionTesting
