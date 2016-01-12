@@ -1,0 +1,24 @@
+HOA: v1
+/* Language: X X "a" */
+AP: 1 "a"
+properties: deterministic
+States: 6
+Start: 5
+Acceptance: 2 Fin(0) | Inf(1)
+acc-name: Streett 1
+--BODY--
+/* Test reverse state index ordering */
+State: 5
+[t] 4
+State: 4
+[t] 3
+State: 3
+[t] 2
+State: 2
+[ 0] 1
+[!0] 0
+State: 1 {1}
+[t] 1
+State: 0 {0}
+[t] 0
+--END--

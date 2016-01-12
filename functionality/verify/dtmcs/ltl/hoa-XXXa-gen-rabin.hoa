@@ -1,0 +1,23 @@
+HOA: v1
+/* Language: X X "a" */
+AP: 1 "a"
+properties: deterministic
+States: 6
+Start: 0
+Acceptance: 3 (Fin(0) & Inf(1) & Inf(2))
+acc-name: generalized-Rabin 1 2
+--BODY--
+State: 0
+[t] 1
+State: 1
+[t] 2
+State: 2
+[t] 3
+State: 3
+[ 0] 4
+[!0] 5
+State: 4 {1 2}
+[t] 4
+State: 5 {0 1}
+[t] 5
+--END--
