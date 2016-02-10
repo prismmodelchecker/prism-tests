@@ -1,0 +1,7 @@
+-ctmc -ex
+-dtmc -ex
+-mdp -ex
+-ctmc -mtbdd
+-dtmc -mtbdd
+-mdp -mtbdd
+
