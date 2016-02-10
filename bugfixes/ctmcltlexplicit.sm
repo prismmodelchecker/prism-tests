@@ -1,5 +1,8 @@
-// Fixed in trunk svn rev 9356
+// Fixed in trunk svn rev 9356:
 // DRA-product and accepting BSCC calculcations on embedded DTMC
+
+// Fixed in trunk svn rev 11168:
+// Nested formulas have to be computed in the original CTMC
 
 ctmc
 
