@@ -9,3 +9,14 @@
 	
 	// RESULT: 1
 	P=? [ (G ("b"=>(F (!"b"&"a"))))&(F G !"b") ];
+
+
+	// ---- does the product work with LTL simplification? --------
+
+	// will be simplified to true, removing AP s=0
+	// RESULT: true
+	P>=1[ true | (X s=0) ]
+
+	// will be simplified to (s<4 & s=0) U s=4, reordering APs
+	// RESULT: true
+	P<=0[ (s<4 U s=4) & (s=0 U s=4) ]

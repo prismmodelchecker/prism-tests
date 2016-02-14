@@ -121,6 +121,16 @@ E[ (G E[ F s=4 ]) & (F s=4) ]
 // RESULT: true
 A[ (G E[ F s=4 ]) => ((G F s=4) | (F G s=0)) ]
 
+// ---- does the product work with LTL simplification? --------
+
+// will be simplified to true, removing AP s=0
+// RESULT: true
+E[ true | (X s=0) ]
+
+// will be simplified to (s<4 & s=0) U s=4, reordering APs
+// RESULT: false
+E[ (s<4 U s=4) & (s=0 U s=4) ]
+
 // ---- trivial cases (true, false) --------
 
 // RESULT: true
