@@ -59,6 +59,12 @@ A [ F A [ G s=7 ] ]
 // RESULT: false
 A [ F E [ G s=7 ] ]
 
+// RESULT: false
+A [ s<7 U s=7 ]
+
+// RESULT: true
+E [ s<7 U s=7 ]
+
 // RESULT: true
 A [ s<7 W s=7 ]
 
@@ -73,6 +79,19 @@ A [ s<=1 W s=2 ]
 
 // RESULT: true
 A [ s=0 W (s=1 | s=2) ]
+
+// can stay globally below 7
+// RESULT: true
+E [ s=7 R s<7 ]
+
+// RESULT: false
+A [ s=7 R s<7 ]
+
+// RESULT: true
+E [ s=7 R s<=7 ]
+
+// RESULT: true
+A [ s=7 R s<=7 ]
 
 // RESULT: true
 E [ A [ X s=7 ] R s<6]
