@@ -1,0 +1,71 @@
+// ------- state-based det. Büchi -------------------------
+
+// RESULT: 0.75
+Pmax=? [ HOA: { "GFa-DBA.hoa", "a" <- s=4|s=6 } ];
+	
+// RESULT: false
+P>=1 [ HOA: { "GFa-DBA.hoa", "a" <- s=1|s=4|s=6 } ];
+	
+// RESULT: 1.0
+Pmin=? [ HOA: { "GFa-DBA.hoa", "a" <- (s=1|s=4|s=6|s=7) } ];
+	
+// RESULT: 0.25
+Pmin=? [ HOA: { "GFa-DBA.hoa", "a" <- (s=1|s=6|s=7) } ];
+
+// RESULT: 0.25
+Pmin=? [ HOA: { "GFa-DBA.hoa", "a" <- s=7 } ];
+
+// ------ transition-based det. Büchi  ------------------------
+
+// RESULT: 0.75
+Pmax=? [ HOA: { "GFa-DBA-trans.hoa", "a" <- s=4|s=6 } ];
+	
+// RESULT: false
+P>=1 [ HOA: { "GFa-DBA-trans.hoa", "a" <- s=1|s=4|s=6 } ];
+	
+// RESULT: 1.0
+Pmin=? [ HOA: { "GFa-DBA-trans.hoa", "a" <- (s=1|s=4|s=6|s=7) } ];
+	
+// RESULT: 0.25
+Pmin=? [ HOA: { "GFa-DBA-trans.hoa", "a" <- (s=1|s=6|s=7) } ];
+
+// RESULT: 0.25
+Pmin=? [ HOA: { "GFa-DBA-trans.hoa", "a" <- s=7 } ];
+
+
+
+// ---------- state-based det. Rabin --------------------------
+
+// RESULT: 1
+Pmax=? [ HOA: { "FGa-DRA.hoa", "a" <- (s=5|s=7|s=8) } ];
+
+// RESULT: 0.25
+Pmin=? [ HOA: { "FGa-DRA.hoa", "a" <- (s=5|s=7|s=8) } ];
+
+// RESULT: 0.75
+Pmax=? [ HOA: { "FGa-DRA.hoa", "a" <- (s=6) } ];
+
+// RESULT: 0
+Pmin=? [  HOA: { "FGa-DRA.hoa", "a" <- (s=6) } ];
+
+// RESULT: 0
+Pmax=? [  HOA: { "FGa-DRA.hoa", "a" <- (s=5) } ];
+
+
+// ---------- transition-based det. Rabin --------------------------
+
+// RESULT: 1
+Pmax=? [ HOA: { "FGa-DRA-trans.hoa", "a" <- (s=5|s=7|s=8) } ];
+
+// RESULT: 0.25
+Pmin=? [ HOA: { "FGa-DRA-trans.hoa", "a" <- (s=5|s=7|s=8) } ];
+
+// RESULT: 0.75
+Pmax=? [ HOA: { "FGa-DRA-trans.hoa", "a" <- (s=6) } ];
+
+// RESULT: 0
+Pmin=? [  HOA: { "FGa-DRA-trans.hoa", "a" <- (s=6) } ];
+
+// RESULT: 0
+Pmax=? [  HOA: { "FGa-DRA-trans.hoa", "a" <- (s=5) } ];
+
