@@ -1,0 +1,21 @@
+// Simple MDP example for testing exact arithmetic
+// The expected results are of the form (2^(k-1) + 1) / 2^k for 0<k<n
+
+mdp
+
+const int n = 10;
+
+module main
+
+x : [0..2*n] init n;
+
+[] x=n -> 0.5:(x'=n-1) + 0.5:(x'=n+1);
+[] x>0 & x<n -> 0.5:(x'=x-1) + 0.5:(x'=n);
+[] x>n & x<2*n -> 0.5:(x'=x+1) + 0.5:(x'=n);
+[] x=0 | x=2*n -> 1.0:(x'=x);
+
+endmodule
+
+rewards
+  true : 1;
+endrewards

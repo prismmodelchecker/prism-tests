@@ -1,0 +1,41 @@
+// RESULT: 1/2
+Pmax=? [ F x=0 ];
+
+// RESULT: 1/2
+Pmin=? [ F x=0 ];
+
+// RESULT: 3/4
+filter(max, Pmax=? [ F x=0 ], x=1)
+
+// RESULT: 1/4
+filter(max, Pmax=? [ F x=0 ], x=19)
+
+// RESULT: 1/2
+filter(max, Pmax=? [ F x=10 ], x=19)
+
+// RESULT: 2/3
+Pmax=? [ F x=1 ];
+
+// RESULT: 1
+Pmax=? [ F x=10 ];
+
+// RESULT: 1/2
+Pmax=? [ F x=20 ];
+
+// RESULT: 3/4
+filter(state, Pmax=? [F x=10], x=2);
+
+// RESULT: 7/8
+filter(state, Pmax=? [F x=10], x=3);
+
+// RESULT: 15/16
+filter(state, Pmax=? [F x=10], x=4);
+
+// RESULT: 511/512
+filter(state, Pmax=? [F x=10], x=11);
+
+// RESULT: 31/32
+filter(state, Pmax=? [F x=10], x=15);
+
+// RESULT: 0
+filter(state, Pmax=? [F x=10], x=20);

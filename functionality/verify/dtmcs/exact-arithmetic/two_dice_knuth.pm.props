@@ -1,0 +1,29 @@
+// RESULT: 1/9
+P=? [ F d=5 ];
+
+// RESULT: 4/21
+filter(state, P=?[F d = 5], s=1)
+
+// RESULT: 1/168
+filter(state, P=?[F d = 5], s=3)
+
+// RESULT: 0.375
+filter(state, P=?[F d = 5], s=4)
+
+// RESULT: 2/21
+filter(state, P=?[F d = 5], s=25)
+
+// RESULT: 0
+P=? [ F d=37 ];
+
+// RESULT: 1/12
+P=? [ F d=10 ];
+
+// RESULT: 1/4
+filter(state, P=? [F d=10], s=29)
+
+// RESULT: 1/2
+filter(state, P=? [F d=10], s=10)
+
+// RESULT: 1
+filter(state, P=? [F d=0], s=0)

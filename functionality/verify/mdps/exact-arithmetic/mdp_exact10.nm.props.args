@@ -1,0 +1,1 @@
+-s -m -h -ex -exact-lp -exportadv mdp_exact10.tra -precision 128
