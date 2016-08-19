@@ -1,0 +1,41 @@
+// RESULT: 1
+Pmax=? [ F x=0 ];
+
+// RESULT: 1/4096
+Pmax=? [ F x=13 ];
+
+// RESULT: 1/2048
+filter(state, Pmax=? [ F x=13 ], x=1);
+
+// RESULT: 1/1024
+filter(state, Pmax=? [ F x=13 ], x=2);
+
+// RESULT: 1/512
+filter(state, Pmax=? [ F x=13 ], x=4);
+
+// RESULT: 1/256
+filter(state, Pmax=? [ F x=13 ], x=5);
+
+// RESULT: 1/128
+filter(state, Pmax=? [ F x=13 ], x=6);
+
+// RESULT: 1/64
+filter(state, Pmax=? [ F x=13 ], x=7);
+
+// RESULT: 1/32
+filter(state, Pmax=? [ F x=13 ], x=8);
+
+// RESULT: 1/16
+filter(state, Pmax=? [ F x=13 ], x=9);
+
+// RESULT: 1/8
+filter(state, Pmax=? [ F x=13 ], x=10);
+
+// RESULT: 1/4
+filter(state, Pmax=? [ F x=13 ], x=11);
+
+// RESULT: 1/2
+filter(state, Pmax=? [ F x=13 ], x=12);
+
+// RESULT: 1
+filter(state, Pmax=? [ F x=13 ], x=13
