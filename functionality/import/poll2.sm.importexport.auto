@@ -1,1 +1,2 @@
 -ctmc -importmodel poll2.all -exportmodel poll2.sta,tra,lab
+-ctmc -importmodel poll2.all -exportmodel poll2.sta,tra,lab -ex

@@ -1,1 +1,2 @@
 -dtmc -importmodel dice.all -exportmodel dice.sta,tra,lab
+-dtmc -importmodel dice.all -exportmodel dice.sta,tra,lab -ex

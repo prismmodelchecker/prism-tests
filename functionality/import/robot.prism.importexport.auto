@@ -1,1 +1,2 @@
 -mdp -importmodel robot.all -exportmodel robot.sta,tra,lab
+-mdp -importmodel robot.all -exportmodel robot.sta,tra,lab -ex
