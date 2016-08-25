@@ -1,0 +1,5 @@
+// RESULT: 1/6
+P=? [ F d=6 ]
+
+// RESULT: 1/6
+P=? [ F "six" ]
