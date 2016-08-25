@@ -24,3 +24,7 @@ label "six" = d=6;
 rewards "coin_flips"
 	[] s<7 : 1;
 endrewards
+
+rewards "value"
+	s=7 : d;
+endrewards
