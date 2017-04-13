@@ -18,6 +18,9 @@ module die
 	
 endmodule
 
+label "end" = s=7;
+label "six" = d=6;
+
 rewards "coin_flips"
 	[] s<7 : 1;
 endrewards
