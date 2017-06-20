@@ -1,0 +1,17 @@
+/** Büchi automaton for GFa, with state-based acceptance */
+HOA: v1
+States: 2
+properties: implicit-labels trans-labels no-univ-branch deterministic complete stutter-invariant
+name: "G F a"
+acc-name: Buchi
+Acceptance: 1 Inf(0)
+Start: 1
+AP: 1 "a"
+--BODY--
+State: 0 {}
+0
+1
+State: 1 {0}
+0
+1
+--END--

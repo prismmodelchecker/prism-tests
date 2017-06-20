@@ -1,17 +1,53 @@
-	// RESULT: 0.75
-	Pmax=? [ G F s=4|s=6 ];
+// RESULT: 0.75
+Pmax=? [ G F s=4|s=6 ];
 	
-	// RESULT: false
-	P>=1 [ G F s=1|s=4|s=6 ];
+// RESULT: false
+P>=1 [ G F s=1|s=4|s=6 ];
 	
-	// RESULT: 1.0
-	Pmin=? [ G F (s=1|s=4|s=6|s=7) ];
+// RESULT: 1.0
+Pmin=? [ G F (s=1|s=4|s=6|s=7) ];
 	
-	// RESULT: 0.25
-	Pmin=? [ G F (s=1|s=6|s=7) ];
+// RESULT: 0.25
+Pmin=? [ G F (s=1|s=6|s=7) ];
 	
-	// RESULT: 0.25
-	Pmin=? [ G F s=7 ];
+// RESULT: 0.25
+Pmin=? [ G F s=7 ];
+
+
+
+// RESULT: 1
+Pmax=? [ F G (s=5|s=7|s=8) ];
+
+// RESULT: 0.25
+Pmin=? [ F G (s=5|s=7|s=8) ];
+
+// RESULT: 0.75
+Pmax=? [ F G (s=6) ];
+
+// RESULT: 0
+Pmin=? [ F G (s=6) ];
+
+// RESULT: 0
+Pmax=? [ F G (s=5) ];
+
 	
-	// RESULT: 0.25
-	Pmin=? [ G F s=7 ];
+
+// RESULT: true
+E[ G F s=8 ];
+
+// RESULT: true
+E[ G F s=4 ];
+
+// RESULT: false
+E[ G F s=2 ];
+
+// RESULT: true
+E[ F G s=0 ];
+
+// RESULT: false
+E[ F G s=8 ];
+
+// RESULT: false
+E[ F G s=2 ];
+
+

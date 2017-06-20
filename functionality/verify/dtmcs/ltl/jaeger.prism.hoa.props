@@ -1,0 +1,66 @@
+// the properties from jaeger.prism.props, but realized via HOA automata
+
+
+// ------ equivalent to P=? [( (X ( X  ( "o_110"))) &  (X ( X  ( X ( "o_Pr0"))))) ]
+
+// RESULT: 2143152/25054848  ( = 968/3276 * 123/239 * 18/32, i.e. approx. 0.085538)
+P=?[ HOA: {"hoa-XXaXb-rabin.hoa", "a" <- "o_110", "b" <- "o_Pr0"} ]
+
+// RESULT: 22911696/25054848  ( = 1 - (968/3276 * 123/239 * 18/32), i.e. approx. 0.914461)
+P=?[ ! HOA: {"hoa-XXaXb-rabin.hoa", "a" <- "o_110", "b" <- "o_Pr0"} ]
+
+// ------ equivalent to P=? [ (X ( X  ( "o_110")))  ] ----------------------
+
+// --- test: Rabin and negated Rabin
+// RESULT: 119064/782964  ( = 968/3276 * 123/239, i.e. approx. 0.152068)
+P=?[ HOA: {"hoa-XXa-rabin.hoa", "a" <- "o_110"} ]
+// RESULT: 663900/782964  ( = 1 - (968/3276 * 123/239), i.e. approx. 0.847932)
+P=?[ ! HOA: {"hoa-XXa-rabin.hoa", "a" <- "o_110"} ]
+
+// --- test: Streett and negated Streett
+// RESULT: 119064/782964  ( = 968/3276 * 123/239, i.e. approx. 0.152068)
+P=?[ HOA: {"hoa-XXa-streett.hoa", "a" <- "o_110"} ]
+// RESULT: 663900/782964  ( = 1 - (968/3276 * 123/239), i.e. approx. 0.847932)
+P=?[ ! HOA: {"hoa-XXa-streett.hoa", "a" <- "o_110"} ]
+
+// --- test: generalized Rabin and negated
+// RESULT: 119064/782964  ( = 968/3276 * 123/239, i.e. approx. 0.152068)
+P=?[ HOA: {"hoa-XXa-gen-rabin.hoa", "a" <- "o_110"} ]
+// RESULT: 663900/782964  ( = 1 - (968/3276 * 123/239), i.e. approx. 0.847932)
+P=?[ ! HOA: {"hoa-XXa-gen-rabin.hoa", "a" <- "o_110"} ]
+
+// --- test: automaton having more APs than necessary, filling "b" by true, false, etc
+// RESULT: 119064/782964  ( = 968/3276 * 123/239, i.e. approx. 0.152068)
+P=?[ HOA: {"hoa-XXaORb-rabin.hoa", "a" <- "o_110", "b" <- false} ]
+// RESULT: 663900/782964  ( = 1 - (968/3276 * 123/239), i.e. approx. 0.847932)
+P=?[ ! HOA: {"hoa-XXaORb-rabin.hoa", "a" <- "o_110", "b" <- false} ]
+// RESULT: 119064/782964  ( = 968/3276 * 123/239, i.e. approx. 0.152068)
+P=?[ HOA: {"hoa-XXaORb-rabin.hoa", "a" <- "o_110", "b" <- "o_110"} ]
+// RESULT: 663900/782964  ( = 1 - (968/3276 * 123/239), i.e. approx. 0.847932)
+P=?[ ! HOA: {"hoa-XXaORb-rabin.hoa", "a" <- "o_110", "b" <- "o_110"} ]
+// RESULT: 1
+P=?[ HOA: {"hoa-XXaORb-rabin.hoa", "a" <- "o_110", "b" <- true} ]
+// RESULT: 0
+P=?[ ! HOA: {"hoa-XXaORb-rabin.hoa", "a" <- "o_110", "b" <- true} ]
+
+
+// ------ equivalent to P=? [  (X ( X  ( X ( "o_Pr0")))) ] ----------------------
+
+// --- test: Rabin and negated Rabin
+// RESULT: 2143152/25054848  ( = 968/3276 * 123/239 * 18/32, i.e. approx. 0.085538)
+P=? [  HOA: {"hoa-XXXa-rabin.hoa", "a" <- "o_Pr0"} ]
+// RESULT: 22911696/25054848  ( = 1 - (968/3276 * 123/239 * 18/32), i.e. approx. 0.914461)
+P=? [ ! HOA: {"hoa-XXXa-rabin.hoa", "a" <- "o_Pr0"} ]
+
+// --- test: Streett and negated Streett
+// RESULT: 2143152/25054848  ( = 968/3276 * 123/239 * 18/32, i.e. approx. 0.085538)
+P=? [  HOA: {"hoa-XXXa-streett.hoa", "a" <- "o_Pr0"} ]
+// RESULT: 22911696/25054848  ( = 1 - (968/3276 * 123/239 * 18/32), i.e. approx. 0.914461)
+P=? [ ! HOA: {"hoa-XXXa-streett.hoa", "a" <- "o_Pr0"} ]
+
+// --- test: generalized Rabin and negated
+// RESULT: 2143152/25054848  ( = 968/3276 * 123/239 * 18/32, i.e. approx. 0.085538)
+P=? [  HOA: {"hoa-XXXa-gen-rabin.hoa", "a" <- "o_Pr0"} ]
+// RESULT: 22911696/25054848  ( = 1 - (968/3276 * 123/239 * 18/32), i.e. approx. 0.914461)
+P=? [ ! HOA: {"hoa-XXXa-gen-rabin.hoa", "a" <- "o_Pr0"} ]
+
