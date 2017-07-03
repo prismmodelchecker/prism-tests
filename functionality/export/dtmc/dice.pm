@@ -21,6 +21,8 @@ endmodule
 label "end" = s=7;
 label "six" = d=6;
 
-rewards "coin_flips"
+// Random reward struct: mix of state/transition rewards
+rewards "r"
+	s=7 : d;
 	[] s<7 : 1;
 endrewards
