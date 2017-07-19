@@ -19,6 +19,12 @@ rewards "a"
 	s=2: 11;
 endrewards
 
+rewards "a_state"
+	s=0: 5;
+	s=1: 12;
+	s=2: 11;
+endrewards
+
 rewards "b"
 	s=0: 2;
 	[] s=0: 3;
@@ -28,3 +34,11 @@ rewards "b"
 	[] s=3: 13;
 	s=3: 17;
 endrewards
+
+rewards "b_state"
+	s=0: 5;
+	s=1: 12;
+	s=2: 11;
+	s=3: 30;
+endrewards
+
