@@ -46,9 +46,9 @@ rewards "waiting"
 endrewards
 
 // expected number of times station 1 is served
-rewards "served"
-	[serve1] true : 1;
-endrewards
+//rewards "served"
+//	[serve1] true : 1;
+//endrewards
 
 label "idle1" = s1=0;
 label "idle12" = s1=0 & s2=0;
