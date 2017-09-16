@@ -1,0 +1,1 @@
+-s -m -h -ex -exact-lp -exportadv cert_example.tra -precision 128
