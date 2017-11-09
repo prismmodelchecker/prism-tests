@@ -1,0 +1,18 @@
+// test case for https://github.com/prismmodelchecker/prism/issues/29
+// transition rewards from deadlock states
+
+// total reward
+// RESULT: 2
+Rmax=?[C]
+
+// total reward (via multi-objective engine)
+// RESULT: 2
+multi(Rmax=?[C])
+
+// accumulate until first time deadlock state is reached
+// RESULT: 2
+Rmax=?[F "deadlock"]
+
+// accumulate for two steps (deadlock state reached in one step)
+// RESULT: 2
+Rmax=?[X X true]

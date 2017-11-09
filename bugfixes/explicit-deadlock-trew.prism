@@ -1,0 +1,15 @@
+// test case for https://github.com/prismmodelchecker/prism/issues/29
+// transition rewards from deadlock states
+
+mdp
+
+module M1
+  s: [0..1] init 0;
+
+  // deadlock for state 1
+  [] s=0 -> 1:(s'=1);
+endmodule
+
+rewards "r"
+  [] true: 2;
+endrewards

@@ -1,0 +1,4 @@
+-explicit
+-mtbdd
+-hybrid
+-sparse
